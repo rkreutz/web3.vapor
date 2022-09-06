@@ -1,4 +1,6 @@
 # web3.vapor
+[![Platforms](https://img.shields.io/badge/platforms-macOS%2012%20|%20Linux%20-ff0000.svg?style=flat)](https://github.com/rkreutz/web3.vapor)
+[![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager/)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rkreutz/web3.vapor/blob/master/LICENSE)
 [![Swift 5.5](https://img.shields.io/badge/Swift-5.5-brightgreen.svg)](http://swift.org)
 [![Vapor 4](https://img.shields.io/badge/Vapor-4-e040fb.svg)](https://vapor.codes)
@@ -11,13 +13,13 @@ Integrates [web3.swift](https://github.com/argentlabs/web3.swift) into Vapor and
 
 Add the package declaration to your project's manifest dependencies array:
 
-```
+```swift
 .package(url: "https://github.com/rkreutz/web3.vapor.git", from: "0.1.0")
 ```
 
 Then add the library to the dependencies array of any target you want to access the module in:
 
-```
+```swift
 .product(name: "web3.vapor", package: "web3.vapor"),
 ```
 
