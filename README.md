@@ -1,5 +1,5 @@
 # web3.vapor
-[![Platforms](https://img.shields.io/badge/platforms-macOS%2012%20|%20Linux%20-ff0000.svg?style=flat)](https://github.com/rkreutz/web3.vapor)
+[![Platforms](https://img.shields.io/badge/platforms-macOS%2011%20|%20Linux%20-ff0000.svg?style=flat)](https://github.com/rkreutz/web3.vapor)
 [![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager/)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rkreutz/web3.vapor/blob/master/LICENSE)
 [![Swift 5.5](https://img.shields.io/badge/Swift-5.5-brightgreen.svg)](http://swift.org)

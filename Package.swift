@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "web3.vapor",
-    platforms: [.macOS(.v12)],
+    platforms: [.macOS(.v11)],
     products: [
         .library(
             name: "web3.vapor",
