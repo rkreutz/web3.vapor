@@ -2,6 +2,7 @@
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rkreutz/web3.vapor/blob/master/LICENSE)
 [![Swift 5.5](https://img.shields.io/badge/Swift-5.5-brightgreen.svg)](http://swift.org)
 [![Vapor 4](https://img.shields.io/badge/Vapor-4-e040fb.svg)](https://vapor.codes)
+[![codebeat badge](https://codebeat.co/badges/17a02a88-9a1c-471f-9c55-762007e5a4cf)](https://codebeat.co/projects/github-com-rkreutz-web3-vapor-main)
 
 
 Integrates [web3.swift](https://github.com/argentlabs/web3.swift) into Vapor and provide some utilities around Web3 on you server.
