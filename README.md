@@ -103,8 +103,8 @@ private class Web3AuthenticatorDelegate: Web3AuthenticationDelegate {
         return true
     }
 
-    func didLogin(with message: SiweMessage, in request: Request) async throws {
-        // This is the opportunity to make any cleanup after the user has successfully logged in (like invalidating nonces)
+    func didLogin(with message: SiweMessage, signature: String, in request: Request) async throws {
+        // This is the opportunity to make any cleanup after the user has successfully logged in (like invalidating nonces), or maybe save the signature as proof of acknowledgement of TnC
         try await request.nonces.invalidate(id: message.nonce)
     }
 }

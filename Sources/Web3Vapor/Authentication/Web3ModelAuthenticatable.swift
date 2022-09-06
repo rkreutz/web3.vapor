@@ -9,7 +9,7 @@ public protocol Web3ModelAuthenticatable: Model, Authenticatable {
 
 public protocol Web3AuthenticationDelegate {
     func verify(message: SiweMessage, in request: Request) async throws -> Bool
-    func didLogin(with message: SiweMessage, in request: Request) async throws
+    func didLogin(with message: SiweMessage, signature: String, in request: Request) async throws
 }
 
 extension Web3ModelAuthenticatable {
@@ -78,7 +78,7 @@ private struct Web3ModelAuthenticator<User: Web3ModelAuthenticatable>: AsyncRequ
             user._$address.value = message.address
             try await user.create(on: request.db(database))
         }
-        try await delegate?.didLogin(with: message, in: request)
+        try await delegate?.didLogin(with: message, signature: signature, in: request)
     }
 }
 
