@@ -81,6 +81,7 @@ private struct Web3ModelAuthenticator<User: Web3ModelAuthenticatable>: AsyncRequ
             let user = User()
             user._$address.value = message.address
             try await user.create(on: request.db(database))
+            request.auth.login(user)
         }
         try await delegate?.didLogin(with: message, signature: signature, in: request)
     }
