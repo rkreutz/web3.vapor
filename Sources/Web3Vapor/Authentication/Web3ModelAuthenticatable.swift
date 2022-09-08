@@ -3,18 +3,24 @@ import Fluent
 import Vapor
 import web3
 
+#if compiler(>=5.5) && compiler(<5.5.2) && canImport(_Concurrency)
 @available(macOS 12, *)
+#endif
 public protocol Web3ModelAuthenticatable: Model, Authenticatable {
     static var web3AddressKey: KeyPath<Self, Field<String>> { get }
 }
 
+#if compiler(>=5.5) && compiler(<5.5.2) && canImport(_Concurrency)
 @available(macOS 12, *)
+#endif
 public protocol Web3AuthenticationDelegate {
     func verify(message: SiweMessage, in request: Request) async throws -> Bool
     func didLogin(with message: SiweMessage, signature: String, in request: Request) async throws
 }
 
+#if compiler(>=5.5) && compiler(<5.5.2) && canImport(_Concurrency)
 @available(macOS 12, *)
+#endif
 extension Web3ModelAuthenticatable {
     public static func web3Authenticator(
         delegate: Web3AuthenticationDelegate? = nil,
@@ -36,7 +42,9 @@ extension Web3ModelAuthenticatable {
     }
 }
 
+#if compiler(>=5.5) && compiler(<5.5.2) && canImport(_Concurrency)
 @available(macOS 12, *)
+#endif
 private struct Web3ModelAuthenticator<User: Web3ModelAuthenticatable>: AsyncRequestAuthenticator {
     let delegate: Web3AuthenticationDelegate?
     let database: DatabaseID?
@@ -86,4 +94,3 @@ private struct Web3ModelAuthenticator<User: Web3ModelAuthenticatable>: AsyncRequ
         try await delegate?.didLogin(with: message, signature: signature, in: request)
     }
 }
-

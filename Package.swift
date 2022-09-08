@@ -12,8 +12,10 @@ let package = Package(
             targets: ["Web3Vapor"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
-        .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"),
+//        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "https://github.com/rkreutz/vapor.git", from: "4.65.2"), // Reduces availability of Concurrency code so it can be run on macOS 10.15 and above
+//        .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"),
+        .package(url: "https://github.com/rkreutz/fluent.git", from: "4.5.1"), // Reduces availability of Concurrency code so it can be run on macOS 10.15 and above
         .package(url: "https://github.com/argentlabs/web3.swift", branch: "develop"),
     ],
     targets: [
